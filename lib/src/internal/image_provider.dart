@@ -65,7 +65,7 @@ class AssetEntityImageProvider extends ImageProvider<AssetEntityImageProvider> {
   @override
   ImageStreamCompleter load(
     AssetEntityImageProvider key,
-    DecoderCallback decode, // ignore: deprecated_member_use
+      Function decode, // ignore: deprecated_member_use
   ) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key, decode),
@@ -90,7 +90,7 @@ class AssetEntityImageProvider extends ImageProvider<AssetEntityImageProvider> {
 
   Future<ui.Codec> _loadAsync(
     AssetEntityImageProvider key,
-    DecoderCallback decode, // ignore: deprecated_member_use
+      Function decode, // ignore: deprecated_member_use
   ) async {
     try {
       assert(key == this);
